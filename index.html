@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reaction Time And Aim Test</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <div class="start">
+        <h1>Welcome To Reaction Time And Aim Test</h1>
+        <p>
+          Click The Balls As Fast As You Can To Get Your Reaction Time Score
+        </p>
+        <button onclick="startGame()">Start The Game</button>
+      </div>
+      <div class="background-animation">
+        <div class="menu-ball"></div>
+      </div>
+    </div>
+    <div class="game" id="game">
+      <div class="stats">
+        <div class="time">
+          <h1>Time left: <span id="time"></span></h1>
+        </div>
+        <div class="total-balls">
+          <h1>Total Balls: <span id="totalBallsSpawned"></span></h1>
+        </div>
+        <div class="score">
+          <h1>Score: <span id="score"></span></h1>
+        </div>
+      </div>
+      <div id="ball-container"></div>
+      <button onclick="backToMenu()">Back</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

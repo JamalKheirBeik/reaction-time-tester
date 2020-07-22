@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  outline: none;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+.menu .start h1,
+.menu .start p {
+  color: #f5f5f5;
+  margin: 20px 0;
+}
+.menu .start h1 {
+  font-size: 40px;
+}
+.menu .start p {
+  font-size: 20px;
+}
+.menu .start button {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+.start {
+  z-index: 10;
+}
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #364f6b;
+  z-index: 9;
+}
+.background-animation .menu-ball {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ff9a00;
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  z-index: 8;
+  box-shadow: 0 0 50px #ea5455;
+  animation: ball 3s ease infinite;
+}
+@keyframes ball {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 50px #ea5455;
+  }
+  50% {
+    transform: scale(1.5);
+    box-shadow: 0 0 100px #ea5455;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 50px #ea5455;
+  }
+}
+.game {
+  display: none;
+  height: 100vh;
+  position: relative;
+  background-color: #364f6b;
+  overflow: hidden;
+}
+.game button {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #f5f5f5;
+}
+.game .ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff9a00;
+  position: absolute;
+  box-shadow: 0 0 50px #ea5455;
+  animation: ball 3s ease;
+}
+.game .stats {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 25px;
+}
+.game .score h1,
+.game .score span,
+.game .time h1,
+.game .time span,
+.game .total-balls h1,
+.game .total-balls span {
+  font-size: 30px;
+  color: #f5f5f5;
+}
+#ball-container {
+  height: 90%;
+  width: 80%;
+  margin: auto;
+}
+.game #ball-container .result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f5;
+  font-size: 50px;
+  text-align: center;
+}
